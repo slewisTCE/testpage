@@ -72,22 +72,23 @@ function CreativeElementSite() {
     <main className="min-h-screen bg-gradient-to-br from-white via-zinc-50 to-zinc-100 text-zinc-800 antialiased dark:from-zinc-950 dark:via-zinc-950 dark:to-black dark:text-zinc-200">
       {/* Top bar */}
       <header className="sticky top-0 z-50 border-b border-zinc-200/70 bg-white/70 backdrop-blur dark:border-zinc-800/60 dark:bg-zinc-900/70">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4">
-          <a href="#home" className="flex items-center gap-3">
-            <div className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-indigo-500 to-fuchsia-500 text-white shadow">
-              <span className="text-sm font-bold">TCE</span>
-            </div>
-            <div className="leading-tight">
-              <div className="text-sm font-semibold tracking-wide">The Creative Element</div>
-              <div className="text-xs text-zinc-500">Invent • Create • Play</div>
-            </div>
+        {/* Fixed height row, no vertical padding */}
+        <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-4">
+          <a href="#home" className="flex items-center">
+            {/* Fixed logo height; no baseline gap; won't grow nav height */}
+            <img
+              src="assets/TCE+logo+RGB+slogan.webp"
+              alt="The Creative Element logo"
+              className="block h-20 w-auto shrink-0"
+            />
           </a>
-          <nav className="hidden items-center gap-6 text-sm md:flex">
+
+          <nav className="hidden items-center gap-6 text-sm leading-none md:flex">
             <a href="#services" className="hover:text-zinc-900 dark:hover:text-white">Services</a>
             <a href="#work" className="hover:text-zinc-900 dark:hover:text-white">Work</a>
             <a href="#about" className="hover:text-zinc-900 dark:hover:text-white">About</a>
             <a href="#events" className="hover:text-zinc-900 dark:hover:text-white">What’s On</a>
-            <a href="#contact" className="rounded-lg bg-zinc-900 px-4 py-2 font-medium text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">Contact</a>
+            <a href="#contact" className="rounded-lg bg-white px-4 py-2 font-medium text-zinc-900 hover:bg-zinc-200 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">Contact</a>
           </nav>
         </div>
       </header>
