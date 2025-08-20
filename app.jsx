@@ -125,9 +125,9 @@ function CreativeElementSite() {
                 </span>
               </div>
               <div className="relative h-40 w-full">
-                <img src="assets/ph_prototyping.jpg" alt="Prototyping" className="h-full w-full rounded-xl object-cover" />
+                <img src="assets/installations.webp" alt="Installations" className="h-full w-full rounded-xl object-cover" />
                 <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/40 rounded-xl">
-                  Prototyping
+                  Installations
                 </span>
               </div>
             </div>
@@ -139,51 +139,16 @@ function CreativeElementSite() {
                 </span>
               </div>
               <div className="relative h-40 w-full">
-                <img src="assets/ph_installations.png" alt="Installations" className="h-full w-full rounded-xl object-cover" />
+                <img src="assets/prototyping.png" alt="Prototyping" className="h-full w-full rounded-xl object-cover" />
                 <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/40 rounded-xl">
-                  Installations
+                  Prototyping
                 </span>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Services */}
-      <Section id="services" eyebrow="What we do" title="Services">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((s) => (
-          <Card key={s.title}>
-            <h3 className="text-lg font-semibold">{s.title}</h3>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{s.blurb}</p>
-          </Card>
-          ))}
-        </div>
-      </Section>
-
-      {/* Work */}
-      <Section id="work" eyebrow="Selected work" title="Who we work with">
-        <div className="mb-6 flex flex-wrap gap-2">
-          <Pill>Defence</Pill>
-          <Pill>Education</Pill>
-          <Pill>Government</Pill>
-          <Pill>Community</Pill>
-          <Pill>Corporate</Pill>
-        </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p) => (
-            <Card key={p.title}>
-              <PlaceholderImg label={p.title} />
-              <div className="mt-4">
-                <h3 className="text-lg font-semibold">{p.title}</h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">{p.client} • {p.years}</p>
-                <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">{p.summary}</p>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </Section>
-
+      
       {/* About */}
       <Section id="about" eyebrow="Who we are" title="About us">
         <div className="grid gap-8 md:grid-cols-3">
@@ -210,6 +175,41 @@ function CreativeElementSite() {
               </div>
             </Card>
           </div>
+        </div>
+      </Section>
+
+      {/* Services */}
+      <Section id="services" eyebrow="What we do" title="Services">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((s) => (
+          <Card key={s.title}>
+            <h3 className="text-lg font-semibold">{s.title}</h3>
+            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{s.blurb}</p>
+          </Card>
+          ))}
+        </div>
+      </Section>
+      
+      {/* Work */}
+      <Section id="work" eyebrow="Selected work" title="Who we work with">
+        <div className="mb-6 flex flex-wrap gap-2">
+          <Pill>Defence</Pill>
+          <Pill>Education</Pill>
+          <Pill>Government</Pill>
+          <Pill>Community</Pill>
+          <Pill>Corporate</Pill>
+        </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((p) => (
+            <Card key={p.title}>
+              <PlaceholderImg label={p.title} />
+              <div className="mt-4">
+                <h3 className="text-lg font-semibold">{p.title}</h3>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">{p.client} • {p.years}</p>
+                <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">{p.summary}</p>
+              </div>
+            </Card>
+          ))}
         </div>
       </Section>
 
