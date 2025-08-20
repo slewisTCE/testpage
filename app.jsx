@@ -59,10 +59,10 @@ const projects = [
 ];
 
 const socials = [
-  { label: "Facebook", href: "https://www.facebook.com" },
-  { label: "Instagram", href: "https://www.instagram.com" },
-  { label: "LinkedIn", href: "https://www.linkedin.com" },
-  { label: "Eventbrite", href: "https://www.eventbrite.com.au" },
+  { label: "Facebook", href: "https://www.facebook.com/InventCreatePlay" },
+  { label: "Instagram", href: "https://www.instagram.com/getcreativeau" },
+  { label: "LinkedIn", href: "https://au.linkedin.com/company/inventcreateplay" },
+  { label: "Eventbrite", href: "https://www.eventbrite.com.au/o/the-creative-element-10960400477" },
 ];
 
 function CreativeElementSite() {
@@ -158,15 +158,10 @@ function CreativeElementSite() {
       <Section id="services" eyebrow="What we do" title="Services">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
-            <Card key={s.title}>
-              <h3 className="text-lg font-semibold">{s.title}</h3>
-              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{s.blurb}</p>
-              <div className="mt-4 flex gap-2">
-                {/* <a href="#contact" className="text-sm font-medium text-indigo-600 hover:underline">Enquire</a>
-                <span aria-hidden>•</span>
-                <a href="#work" className="text-sm text-zinc-600 hover:underline dark:text-zinc-400">See examples</a> */}
-              </div>
-            </Card>
+          <Card key={s.title}>
+            <h3 className="text-lg font-semibold">{s.title}</h3>
+            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{s.blurb}</p>
+          </Card>
           ))}
         </div>
       </Section>
@@ -223,93 +218,26 @@ function CreativeElementSite() {
         </div>
       </Section>
 
-      {/* Events */}
-      {/* <Section id="events" eyebrow="Join in" title="What’s On">
-        <div className="grid gap-6 md:grid-cols-3">
-          <Card className="md:col-span-2">
-            <h3 className="text-lg font-semibold">Community events</h3>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              From electronics and robotics to creative fabrication, our events blend science, technology and art in fun, practical ways.
-            </p>
-            <div className="mt-4 flex gap-3">
-              <a href="#contact" className="rounded-lg bg-zinc-900 px-4 py-2 text-sm font-semibold text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">Ask about the next date</a>
-              <a href="#newsletter" className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-zinc-700 dark:text-white dark:hover:bg-zinc-800">Join newsletter</a>
-            </div>
-          </Card>
-          <Card>
-            <h3 className="text-lg font-semibold">Past highlights</h3>
-            <ul className="mt-3 space-y-2 text-sm text-zinc-700 dark:text-zinc-300">
-              <li>Workshops on electronics & sensors</li>
-              <li>Mural & community-build sessions</li>
-              <li>STEM showcases and installations</li>
-            </ul>
-          </Card>
-        </div>
-      </Section> */}
-
       {/* Contact */}
       <Section id="contact" eyebrow="Say hello" title="Contact us">
         <div className="grid gap-8 md:grid-cols-2">
-          {/* <Card className="md:col-span-2">
-            {sent ? (
-              <div className="rounded-xl bg-green-50 p-4 text-green-700 dark:bg-green-900/30 dark:text-green-300">
-                Thanks — your message is ready to send. Hook this form to your email service (Formspree, Netlify, or your API).
-              </div>
-            ) : (
-              <form
-                className="grid grid-cols-1 gap-4 md:grid-cols-2"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setSent(true);
-                }}
-              >
-                <div>
-                  <label className="text-sm font-medium">First name</label>
-                  <input required className="mt-1 w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm outline-none ring-zinc-400 placeholder:text-zinc-400 focus:ring-2 dark:border-zinc-700 dark:bg-zinc-900" placeholder="Ada" />
-                </div>
-                <div>
-                  <label className="text-sm font-medium">Last name</label>
-                  <input className="mt-1 w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm outline-none ring-zinc-400 placeholder:text-zinc-400 focus:ring-2 dark:border-zinc-700 dark:bg-zinc-900" placeholder="Lovelace" />
-                </div>
-                <div className="md:col-span-2">
-                  <label className="text-sm font-medium">Email</label>
-                  <input required type="email" className="mt-1 w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm outline-none ring-zinc-400 placeholder:text-zinc-400 focus:ring-2 dark:border-zinc-700 dark:bg-zinc-900" placeholder="you@company.com" />
-                </div>
-                <div className="md:col-span-2">
-                  <label className="text-sm font-medium">Message</label>
-                  <textarea required rows="5" className="mt-1 w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm outline-none ring-zinc-400 placeholder:text-zinc-400 focus:ring-2 dark:border-zinc-700 dark:bg-zinc-900" placeholder="Tell us about your project…" />
-                </div>
-                <div className="flex items-center gap-3 md:col-span-2">
-                  <input id="newsletter" type="checkbox" className="h-4 w-4 rounded border-zinc-300 text-zinc-900 focus:ring-zinc-900 dark:border-zinc-700 dark:bg-zinc-900" />
-                  <label htmlFor="newsletter" className="text-sm">Subscribe to the newsletter</label>
-                </div>
-                <div className="md:col-span-2">
-                  <button type="submit" className="w-full rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">Send message</button>
-                </div>
-              </form>
-            )}
-          </Card> */}
-          {/* <div className="space-y-6"> */}
-            <Card>
-              <h3 className="text-lg font-semibold">Contact</h3>
-              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                admin@thecreativeelement.com.au<br/>+61 437 698 069
-              </p>
-            </Card>
-            <Card>
-              <h3 className="text-lg font-semibold">Socials</h3>
-              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Stay in touch and upto date with upcoming events and workshops.</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {socials.map((s) => (
-                  <a key={s.label} href={s.href} target="_blank" rel="noreferrer" className="text-sm text-zinc-700 underline underline-offset-4 hover:no-underline dark:text-zinc-300">
-                    {s.label}
-                  </a>
-                ))}
-              </div>
-              {/* <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Get dates for upcoming events and workshops.</p>
-              <a href="#newsletter" className="mt-3 inline-block rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-zinc-700 dark:text-white dark:hover:bg-zinc-800">Subscribe</a> */}
-            </Card>
-          {/* </div> */}
+          <Card>
+            <h3 className="text-lg font-semibold">Contact</h3>
+            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+              admin@thecreativeelement.com.au<br/>+61 437 698 069
+            </p>
+          </Card>
+          <Card>
+            <h3 className="text-lg font-semibold">Socials</h3>
+            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Stay in touch and upto date with upcoming events and workshops.</p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {socials.map((s) => (
+                <a key={s.label} href={s.href} target="_blank" rel="noreferrer" className="text-sm text-zinc-700 underline underline-offset-4 hover:no-underline dark:text-zinc-300">
+                  {s.label}
+                </a>
+              ))}
+            </div>
+          </Card>
         </div>
       </Section>
 
@@ -327,7 +255,6 @@ function CreativeElementSite() {
             <a href="#services" className="hover:underline">Services</a><span aria-hidden>•</span>
             <a href="#work" className="hover:underline">Experience</a><span aria-hidden>•</span>
             <a href="#about" className="hover:underline">About</a><span aria-hidden>•</span>
-            {/* <a href="#events" className="hover:underline">What’s On</a><span aria-hidden>•</span> */}
             <a href="#contact" className="hover:underline">Contact</a>
           </div>
         </div>
