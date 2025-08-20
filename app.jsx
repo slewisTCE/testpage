@@ -85,9 +85,9 @@ function CreativeElementSite() {
 
           <nav className="hidden items-center gap-6 text-sm leading-none md:flex">
             <a href="#services" className="hover:text-zinc-900 dark:hover:text-white">Services</a>
-            <a href="#work" className="hover:text-zinc-900 dark:hover:text-white">Work</a>
+            <a href="#work" className="hover:text-zinc-900 dark:hover:text-white">Experience</a>
             <a href="#about" className="hover:text-zinc-900 dark:hover:text-white">About</a>
-            <a href="#events" className="hover:text-zinc-900 dark:hover:text-white">What’s On</a>
+            {/* <a href="#events" className="hover:text-zinc-900 dark:hover:text-white">What’s On</a> */}
             <a href="#contact" className="rounded-lg bg-white px-4 py-2 font-medium text-zinc-900 hover:bg-zinc-200 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">Contact</a>
           </nav>
         </div>
@@ -111,19 +111,44 @@ function CreativeElementSite() {
               We design programs, workshops and experiences that bridge science and art — and send people home with something they learned and something they made.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#services" className="rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">Explore services</a>
-              <a href="#events" className="rounded-xl border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800">What’s on</a>
+              {/* <a href="#services" className="rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">Explore services</a> */}
+              {/* <a href="#events" className="rounded-xl border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800">What’s on</a> */}
             </div>
           </div>
           <div className="grid gap-4 md:gap-6">
             <div className="grid grid-cols-3 gap-3">
-              <PlaceholderImg label="Lab / makerspace" />
-              <PlaceholderImg label="Workshops" />
-              <PlaceholderImg label="Prototyping" />
+              <div className="relative h-40 w-full">
+                <img src="assets/lab.jpg" alt="Lab / makerspace" className="h-full w-full rounded-xl object-cover" />
+                <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/40 rounded-xl">
+                  Lab / makerspace
+                </span>
+              </div>
+              <div className="relative h-40 w-full">
+                <img src="assets/ph_workshop.png" alt="Workshops" className="h-full w-full rounded-xl object-cover" />
+                <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/40 rounded-xl">
+                  Workshops
+                </span>
+              </div>
+              <div className="relative h-40 w-full">
+                <img src="assets/ph_prototyping.jpg" alt="Prototyping" className="h-full w-full rounded-xl object-cover" />
+                <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/40 rounded-xl">
+                  Prototyping
+                </span>
+              </div>
             </div>
             <div className="grid grid-cols-2 gap-3">
-              <PlaceholderImg label="Events" />
-              <PlaceholderImg label="Installations" />
+              <div className="relative h-40 w-full">
+                <img src="assets/ph_events.png" alt="Events" className="h-full w-full rounded-xl object-cover" />
+                <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/40 rounded-xl">
+                  Events
+                </span>
+              </div>
+              <div className="relative h-40 w-full">
+                <img src="assets/ph_installations.png" alt="Installations" className="h-full w-full rounded-xl object-cover" />
+                <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/40 rounded-xl">
+                  Installations
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -137,9 +162,9 @@ function CreativeElementSite() {
               <h3 className="text-lg font-semibold">{s.title}</h3>
               <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{s.blurb}</p>
               <div className="mt-4 flex gap-2">
-                <a href="#contact" className="text-sm font-medium text-indigo-600 hover:underline">Enquire</a>
+                {/* <a href="#contact" className="text-sm font-medium text-indigo-600 hover:underline">Enquire</a>
                 <span aria-hidden>•</span>
-                <a href="#work" className="text-sm text-zinc-600 hover:underline dark:text-zinc-400">See examples</a>
+                <a href="#work" className="text-sm text-zinc-600 hover:underline dark:text-zinc-400">See examples</a> */}
               </div>
             </Card>
           ))}
@@ -199,7 +224,7 @@ function CreativeElementSite() {
       </Section>
 
       {/* Events */}
-      <Section id="events" eyebrow="Join in" title="What’s On">
+      {/* <Section id="events" eyebrow="Join in" title="What’s On">
         <div className="grid gap-6 md:grid-cols-3">
           <Card className="md:col-span-2">
             <h3 className="text-lg font-semibold">Community events</h3>
@@ -220,12 +245,12 @@ function CreativeElementSite() {
             </ul>
           </Card>
         </div>
-      </Section>
+      </Section> */}
 
       {/* Contact */}
       <Section id="contact" eyebrow="Say hello" title="Contact us">
-        <div className="grid gap-8 md:grid-cols-3">
-          <Card className="md:col-span-2">
+        <div className="grid gap-8 md:grid-cols-2">
+          {/* <Card className="md:col-span-2">
             {sent ? (
               <div className="rounded-xl bg-green-50 p-4 text-green-700 dark:bg-green-900/30 dark:text-green-300">
                 Thanks — your message is ready to send. Hook this form to your email service (Formspree, Netlify, or your API).
@@ -263,13 +288,17 @@ function CreativeElementSite() {
                 </div>
               </form>
             )}
-          </Card>
-          <div className="space-y-6">
+          </Card> */}
+          {/* <div className="space-y-6"> */}
             <Card>
               <h3 className="text-lg font-semibold">Contact</h3>
               <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                 admin@thecreativeelement.com.au<br/>+61 437 698 069
               </p>
+            </Card>
+            <Card>
+              <h3 className="text-lg font-semibold">Socials</h3>
+              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Stay in touch and upto date with upcoming events and workshops.</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {socials.map((s) => (
                   <a key={s.label} href={s.href} target="_blank" rel="noreferrer" className="text-sm text-zinc-700 underline underline-offset-4 hover:no-underline dark:text-zinc-300">
@@ -277,13 +306,10 @@ function CreativeElementSite() {
                   </a>
                 ))}
               </div>
+              {/* <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Get dates for upcoming events and workshops.</p>
+              <a href="#newsletter" className="mt-3 inline-block rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-zinc-700 dark:text-white dark:hover:bg-zinc-800">Subscribe</a> */}
             </Card>
-            <Card>
-              <h3 className="text-lg font-semibold">Newsletter</h3>
-              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Get dates for upcoming events and workshops.</p>
-              <a href="#newsletter" className="mt-3 inline-block rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-zinc-700 dark:text-white dark:hover:bg-zinc-800">Subscribe</a>
-            </Card>
-          </div>
+          {/* </div> */}
         </div>
       </Section>
 
@@ -294,11 +320,14 @@ function CreativeElementSite() {
             <div className="font-semibold">The Creative Element</div>
             <div className="text-zinc-500">© {new Date().getFullYear()} • Canberra, Australia</div>
           </div>
+          <div className="text-center">
+            <div className="text-zinc-500">ABN 57 618 117 070</div>
+          </div>
           <div className="flex flex-wrap items-center justify-center gap-2 text-zinc-600 dark:text-zinc-400">
             <a href="#services" className="hover:underline">Services</a><span aria-hidden>•</span>
-            <a href="#work" className="hover:underline">Work</a><span aria-hidden>•</span>
+            <a href="#work" className="hover:underline">Experience</a><span aria-hidden>•</span>
             <a href="#about" className="hover:underline">About</a><span aria-hidden>•</span>
-            <a href="#events" className="hover:underline">What’s On</a><span aria-hidden>•</span>
+            {/* <a href="#events" className="hover:underline">What’s On</a><span aria-hidden>•</span> */}
             <a href="#contact" className="hover:underline">Contact</a>
           </div>
         </div>
