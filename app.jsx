@@ -84,11 +84,10 @@ function CreativeElementSite() {
           </a>
 
           <nav className="hidden items-center gap-6 text-sm leading-none md:flex">
-            <a href="#services" className="hover:text-zinc-900 dark:hover:text-white">Services</a>
-            <a href="#work" className="hover:text-zinc-900 dark:hover:text-white">Experience</a>
-            <a href="#about" className="hover:text-zinc-900 dark:hover:text-white">About</a>
-            {/* <a href="#events" className="hover:text-zinc-900 dark:hover:text-white">What’s On</a> */}
-            <a href="#contact" className="rounded-lg bg-white px-4 py-2 font-medium text-zinc-900 hover:bg-zinc-200 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">Contact</a>
+          <a href="#services" className="hover:text-zinc-900 dark:hover:text-white">Services</a>
+          <a href="#work" className="hover:text-zinc-900 dark:hover:text-white">Experience</a>
+          <a href="#about" className="hover:text-zinc-900 dark:hover:text-white">About</a>
+          <a href="#contact" className="rounded-lg bg-white px-4 py-2 font-medium text-zinc-900 hover:bg-zinc-200 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">Contact</a>
           </nav>
         </div>
       </header>
@@ -100,20 +99,16 @@ function CreativeElementSite() {
           <div className="absolute right-0 top-1/3 h-72 w-72 rounded-full bg-fuchsia-500/10 blur-3xl" />
         </div>
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-24 md:grid-cols-2 md:py-32">
-          <div>
-            <div className="mb-3 flex flex-wrap gap-2">
-              <Pill>STEM • Design • Making</Pill>
-              <Pill>Inclusive by design</Pill>
-              <Pill>Hands-on learning</Pill>
-            </div>
-            <h1 className="text-4xl font-black leading-tight tracking-tight md:text-6xl">Invent. Create. Play.</h1>
-            <p className="mt-5 max-w-xl text-lg text-zinc-600 dark:text-zinc-400">
-              We design programs, workshops and experiences that bridge science and art — and send people home with something they learned and something they made.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              {/* <a href="#services" className="rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">Explore services</a> */}
-              {/* <a href="#events" className="rounded-xl border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800">What’s on</a> */}
-            </div>
+        <div>
+          <div className="mb-3 flex flex-wrap gap-2">
+            <Pill>STEM • Design • Making</Pill>
+            <Pill>Inclusive by design</Pill>
+            <Pill>Hands-on learning</Pill>
+          </div>
+          <h1 className="text-4xl font-black leading-tight tracking-tight md:text-6xl">Invent. Create. Play.</h1>
+          <p className="mt-5 max-w-xl text-lg text-zinc-600 dark:text-zinc-400">
+            We design programs, workshops and experiences that bridge science and art — and send people home with something they learned and something they made.
+          </p>
           </div>
           <div className="grid gap-4 md:gap-6">
             <div className="grid grid-cols-3 gap-3">
@@ -224,7 +219,7 @@ function CreativeElementSite() {
           <Card>
             <h3 className="text-lg font-semibold">Contact</h3>
             <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              admin@thecreativeelement.com.au<br/>+61 437 698 069
+              Email us to request a quote for a project, inquire about a collaboration, or simply say hello.<br/><br/>admin@thecreativeelement.com.au
             </p>
           </Card>
           <Card>
