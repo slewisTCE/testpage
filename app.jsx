@@ -124,7 +124,7 @@ function CreativeElementSite() {
                 </span>
               </div>
               <div className="relative h-40 w-full">
-                <img src="assets/ph_workshop.png" alt="Workshops" className="h-full w-full rounded-xl object-cover" />
+                <img src="assets/workshop.png" alt="Workshops" className="h-full w-full rounded-xl object-cover" />
                 <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/40 rounded-xl">
                   Workshops
                 </span>
@@ -138,7 +138,7 @@ function CreativeElementSite() {
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="relative h-40 w-full">
-                <img src="assets/ph_events.png" alt="Events" className="h-full w-full rounded-xl object-cover" />
+                <img src="assets/events.png" alt="Events" className="h-full w-full rounded-xl object-cover" />
                 <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/40 rounded-xl">
                   Events
                 </span>
