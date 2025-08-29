@@ -26,11 +26,11 @@ const Card = ({ children, className = "" }) => (
   </div>
 );
 
-const PlaceholderImg = ({ label = "" }) => (
-  <div className="flex h-40 w-full items-center justify-center rounded-xl bg-gradient-to-br from-zinc-100 to-zinc-200 text-zinc-500 dark:from-zinc-800 dark:to-zinc-700">
-    <span className="text-xs">{label || "Replace with your image"}</span>
-  </div>
-);
+// const PlaceholderImg = ({ label = "" }) => (
+//   <div className="flex h-40 w-full items-center justify-center rounded-xl bg-gradient-to-br from-zinc-100 to-zinc-200 text-zinc-500 dark:from-zinc-800 dark:to-zinc-700">
+//     <span className="text-xs">{label || "Replace with your image"}</span>
+//   </div>
+// );
 
 // Data
 const services = [
@@ -77,7 +77,7 @@ const projects = [
     client: "Australian Defence Force",
     years: "2019",
     summary: "Jericho Astro-STEM ‘physics in disguise’ zone — a major international, family-friendly STEM activation.",
-    image: "assets/projects/f1gp.png"
+    image: "assets/projects/f1gp.jpg"
   },
   {
     title: "PAX AUS — Games in Defence",
@@ -98,7 +98,7 @@ const projects = [
     client: "National Capital Authority",
     years: "2018",
     summary: "Interactive exhibition design, manufacture and install at Regatta Point.",
-    image: "assets/projects/exhibition.webp"
+    image: "assets/projects/exhibition.jpg"
   },
   {
     title: "88mph nightclub",
@@ -112,7 +112,7 @@ const projects = [
     client: "Silversun Pictures",
     years: "2019",
     summary: "Design and fabrication of screen-ready props for the Australian horror-thriller.",
-    image: "assets/projects/furies.png"
+    image: "assets/projects/furies.jpg"
   },
   {
     title: "Custom chocolate moulds",
@@ -191,13 +191,13 @@ function CreativeElementSite() {
                 </span>
               </div>
               <div className="relative h-40 w-full">
-                <img src="assets/workshop.png" alt="Workshops" className="h-full w-full rounded-xl object-cover" />
+                <img src="assets/workshop.jpg" alt="Workshops" className="h-full w-full rounded-xl object-cover" />
                 <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/40 rounded-xl">
                   Workshops
                 </span>
               </div>
               <div className="relative h-40 w-full">
-                <img src="assets/installations.webp" alt="Installations" className="h-full w-full rounded-xl object-cover" />
+                <img src="assets/installations.jpg" alt="Installations" className="h-full w-full rounded-xl object-cover" />
                 <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/40 rounded-xl">
                   Installations
                 </span>
@@ -205,7 +205,7 @@ function CreativeElementSite() {
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="relative h-40 w-full">
-                <img src="assets/events.png" alt="Events" className="h-full w-full rounded-xl object-cover" />
+                <img src="assets/events.jpg" alt="Events" className="h-full w-full rounded-xl object-cover" />
                 <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/40 rounded-xl">
                   Events
                 </span>
