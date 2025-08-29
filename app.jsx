@@ -44,18 +44,90 @@ const services = [
 ];
 
 const projects = [
-  { title: "EDGY AF makerspace program", client: "Royal Australian Air Force", years: "2020 – current", summary: "Applied design-thinking program delivered across dedicated makerspace labs — upskilling personnel to recognise issues and prototype solutions." },
-  { title: "Avalon International Airshow", client: "Royal Australian Air Force", years: "2019", summary: "Flight-line immersive experience and STEM workshops highlighting pathways into Air Force technical careers." },
-  { title: "Amplify workshops", client: "Royal Australian Air Force", years: "2023", summary: "Electronics and sensors workshops encouraging STEM learning for female RAAF cadets at Richmond Airbase." },
-  { title: "STEMSells education program", client: "Cbr Innovation Network / Australian Govt", years: "2015 – 2018", summary: "10-week cohort program where participants designed and built their own product with industry-grade tools." },
-  { title: "ADF Pavilion — F1 Grand Prix", client: "Australian Defence Force", years: "2019", summary: "Jericho Astro-STEM ‘physics in disguise’ zone — a major international, family-friendly STEM activation." },
-  { title: "PAX AUS — Games in Defence", client: "Australian Defence Force", years: "2022", summary: "Panel and outreach on game-tech and innovation for skills development across the Defence ecosystem." },
-  { title: "Teacher PD — Makerspaces", client: "Garran Primary", years: "2017", summary: "Professional development to establish maker pedagogy and align hands-on skills with curriculum." },
-  { title: "National Capital Exhibition", client: "National Capital Authority", years: "2018", summary: "Interactive exhibition design, manufacture and install at Regatta Point." },
-  { title: "88mph nightclub", client: "88mph (Canberra)", years: "2017", summary: "Bespoke lighting and a disco-rainbow light-up dance floor build." },
-  { title: "Film props — ‘The Furies’", client: "Silversun Pictures", years: "2019", summary: "Design and fabrication of screen-ready props for the Australian horror-thriller." },
-  { title: "Custom chocolate moulds", client: "Enigma Fine Chocolates", years: "2019", summary: "CAD + 3D printing workshop where attendees designed their own moulds and made chocolate." },
-  { title: "Old Parliament House doors", client: "Museum of Australian Democracy", years: "2017", summary: "Re-manufactured decorative components to restore the iconic front doors." },
+  { 
+    title: "EDGY AF makerspace program",
+    client: "Royal Australian Air Force",
+    years: "2020 – current",
+    summary: "Applied design-thinking program delivered across dedicated makerspace labs — upskilling personnel to recognise issues and prototype solutions.",
+    image: "assets/projects/edgy.png"
+  },
+  { 
+    title: "Avalon International Airshow",
+    client: "Royal Australian Air Force",
+    years: "2019",
+    summary: "Flight-line immersive experience and STEM workshops highlighting pathways into Air Force technical careers.",
+    image: "assets/projects/avalon.jpg"
+  },
+  {
+    title: "Amplify workshops",
+    client: "Royal Australian Air Force",
+    years: "2023",
+    summary: "Electronics and sensors workshops encouraging STEM learning for female RAAF cadets at Richmond Airbase.",
+    image: "assets/projects/aafc.png"
+  },
+  {
+    title: "STEMSells education program",
+    client: "Canberra Innovation Network / Australian Govt",
+    years: "2015 – 2018",
+    summary: "10-week cohort program where participants designed and built their own product with industry-grade tools.",
+    image: "assets/projects/cin.webp"
+  },
+  { 
+    title: "ADF Pavilion — F1 Grand Prix",
+    client: "Australian Defence Force",
+    years: "2019",
+    summary: "Jericho Astro-STEM ‘physics in disguise’ zone — a major international, family-friendly STEM activation.",
+    image: "assets/projects/f1gp.png"
+  },
+  {
+    title: "PAX AUS — Games in Defence",
+    client: "Australian Defence Force",
+    years: "2022",
+    summary: "Panel and outreach on game-tech and innovation for skills development across the Defence ecosystem.",
+    image: "assets/projects/pax.webp"
+  },
+  {
+    title: "Teacher PD — Makerspaces",
+    client: "Garran Primary",
+    years: "2017",
+    summary: "Professional development to establish maker pedagogy and align hands-on skills with curriculum.",
+    image: "assets/projects/garran.webp"
+  },
+  {
+    title: "National Capital Exhibition",
+    client: "National Capital Authority",
+    years: "2018",
+    summary: "Interactive exhibition design, manufacture and install at Regatta Point.",
+    image: "assets/projects/exhibition.webp"
+  },
+  {
+    title: "88mph nightclub",
+    client: "88mph (Canberra)",
+    years: "2017",
+    summary: "Bespoke lighting and a disco-rainbow light-up dance floor build.",
+    image: "assets/projects/88mph.webp"
+  },
+  {
+    title: "Film props — ‘The Furies’",
+    client: "Silversun Pictures",
+    years: "2019",
+    summary: "Design and fabrication of screen-ready props for the Australian horror-thriller.",
+    image: "assets/projects/furies.png"
+  },
+  {
+    title: "Custom chocolate moulds",
+    client: "Enigma Fine Chocolates",
+    years: "2019",
+    summary: "CAD + 3D printing workshop where attendees designed their own moulds and made chocolate.",
+    image: "assets/projects/enigma.webp"
+  },
+  {
+    title: "Old Parliament House doors",
+    client: "Museum of Australian Democracy",
+    years: "2017",
+    summary: "Re-manufactured decorative components to restore the iconic front doors.",
+    image: "assets/projects/moad.webp"
+  }
 ];
 
 const socials = [
@@ -191,7 +263,7 @@ function CreativeElementSite() {
       </Section>
       
       {/* Work */}
-      <Section id="work" eyebrow="Selected work" title="Who we work with">
+      <Section id="work" eyebrow="Our Experience" title="Who we work with">
         <div className="mb-6 flex flex-wrap gap-2">
           <Pill>Defence</Pill>
           <Pill>Education</Pill>
@@ -202,11 +274,24 @@ function CreativeElementSite() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
             <Card key={p.title}>
-              <PlaceholderImg label={p.title} />
+              <div className="relative h-40 w-full flex items-center justify-center overflow-hidden rounded-xl">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="h-auto w-full object-cover"
+                />
+                <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-white bg-black/20 rounded-xl">
+                  {/* {p.title} */}
+                </span>
+              </div>
               <div className="mt-4">
                 <h3 className="text-lg font-semibold">{p.title}</h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">{p.client} • {p.years}</p>
-                <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">{p.summary}</p>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  {p.client} • {p.years}
+                </p>
+                <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
+                  {p.summary}
+                </p>
               </div>
             </Card>
           ))}
@@ -217,9 +302,10 @@ function CreativeElementSite() {
       <Section id="contact" eyebrow="Say hello" title="Contact us">
         <div className="grid gap-8 md:grid-cols-2">
           <Card>
-            <h3 className="text-lg font-semibold">Contact</h3>
+            <h3 className="text-lg font-semibold">Email</h3>
             <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              Email us to request a quote for a project, inquire about a collaboration, or simply say hello.<br/><br/>admin@thecreativeelement.com.au
+              Email us to request a quote for a project, inquire about a collaboration, or simply say hello.<br/><br/>
+              <a href="mailto:admin@thecreativeelement.com.au" className="text-sm text-zinc-700 underline underline-offset-4 hover:no-underline dark:text-zinc-300">admin@thecreativeelement.com.au</a>
             </p>
           </Card>
           <Card>
