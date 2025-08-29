@@ -26,11 +26,6 @@ const Card = ({ children, className = "" }) => (
   </div>
 );
 
-// const PlaceholderImg = ({ label = "" }) => (
-//   <div className="flex h-40 w-full items-center justify-center rounded-xl bg-gradient-to-br from-zinc-100 to-zinc-200 text-zinc-500 dark:from-zinc-800 dark:to-zinc-700">
-//     <span className="text-xs">{label || "Replace with your image"}</span>
-//   </div>
-// );
 
 // Data
 const services = [
